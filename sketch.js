@@ -1,11 +1,12 @@
 var Engine = Matter.Engine,
     World = Matter.World,
-  Events = Matter.Events,
-  Bodies = Matter.Bodies;
+    Events = Matter.Events,
+    Bodies = Matter.Bodies;
  
 var particles = [];
 var plinkos = [];
 var divisions = [];
+var gamestate = "PLAY"
 
 var particle;
 
@@ -19,7 +20,7 @@ function setup() {
 
 
    for (var k = 0; k <=width; k = k + 80) {
-     divisions.push(new Divisions(k, height-divisionsHeight/2, 10, divisionsHeight));
+     divisions.push(new Divisions(k, height-divisionHeight/2, 10, divisionHeight));
    }
 
 
@@ -81,3 +82,4 @@ function draw() {
      divisions[k].display();
    }
 }
+
